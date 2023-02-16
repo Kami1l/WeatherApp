@@ -51,6 +51,10 @@ body {
 .page .header .header__list .header__item {
   cursor: pointer;
 }
+.page .header .header__list .header__item a {
+  text-decoration: none;
+  color: rgba(0, 100, 194, 0.7);
+}
 .page .main {
   display: flex;
   justify-content: space-between;
@@ -67,8 +71,13 @@ body {
 .page .main section:nth-last-child(1) {
   margin-bottom: 100px;
 }
-.page .main .main__block {
+.page .main a {
   z-index: 999;
+  text-decoration: none;
+  color: white;
+}
+.page .main .main__block {
+  z-index: 998;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.4fr 0.4fr 0.4fr;

@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.mask{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 100, 194, 0.7);
+    z-index: 1;
+}
+.page{
+    background-image:url(/img/img.jpg) ;
+    background-position: 0 0;
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    .page__header{
+        z-index: 1000;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        background: white;
+        color:rgba(0, 100, 194, 0.7);
+        font-size: 1.5em;
+        .header__list{
+            font-weight: bold;
+            width: 50%;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &:nth-child(2){
+                width: 20%;
+                font-size: 0.5em;
+                justify-content: space-evenly;
+            }
+            .header__item{
+                cursor: pointer;
+                a{
+                    text-decoration: none;
+                    color:rgba(0, 100, 194, 0.7);
+                }
+            }
+        }
+    }
+    .main{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 9fr 0.5fr;
+        padding-top: 4em;
+        width: 100%;
+        .page__section{
+            z-index: 999;
+            display: flex;
+            .page__list{
+                list-style: none;
+                display: flex;
+                width: 50%;
+                justify-content: space-evenly;
+                .page__item{
+                    &:nth-child(1){
+                        cursor:default;
+                        &:hover{
+                            border-bottom: none;
+                        }
+                    }
+                    font-weight: bold;
+                    transform: translateY(100%);
+                    cursor: pointer;
+                    &:hover{
+                        border-bottom: 1px solid white ;
+                    }
+                }
+            }
+            .leftBox{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .leftBox__actualTime{
+                    display: flex;
+                    justify-content: space-between;
+                    padding:0 25px;
+                    .actualTime__day{
+                    }
+                    .actualTime__time{
+                    }
+                }
+                .leftBox__info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    .info__icon{
+                        width: 15vw;
+                        img{
+                            width: inherit;
+                            height: inherit;
+                        }
+                    }
+                    .info__weather{
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-direction: column;
+                        height: 100%;
+                        .weather__temperature{
+                            font-size: 4em;
+                            white-space: nowrap;
+                            font-weight: bold;
+                            sup{
+                                font-size: 0.3em;
+                                position: relative;
+                                top: -15px;
+                            }
+                        }
+                        .weather__condition{
+                            font-size: 1em;
+
+                        }
+                        .weather__wind{
+                            font-size: 0.8em;
+                        }
+                        .weather__more{
+                            color:rgb(248, 201, 70);
+                            font-weight: bold;
+
+                        }
+                    }
+                    .leftBox__air{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:space-evenly;
+                        margin-top: 7px;
+                        height: 100%;
+                        .air__uv{
+                            font-size: 1em;
+                            font-weight: bold;
+                        }
+                        .air__Ultraviolet{
+                            background: rgb(248, 201, 70);
+                            text-align: center;
+                            padding: 5px;
+                            color:black;
+                            font-weight: bold;
+                        }
+                        .air__pm{
+                            font-size: 0.6em;
+                            font-weight: bold;
+                        }
+                        .air__station{
+                            font-size: 0.6em;
+                            font-weight: bold;
+                        }
+                        .air__more{
+                            color:rgb(248, 201, 70);
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .centerBox{
+                width: 30%;
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                .centerBox__night{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;;
+                    .night__title{
+                        font-size: 2.5em;
+                    }
+                    .night__icon{
+                        width: 140px;
+                        height: 140px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 80px;
+                            height: 80px;
+
+                        }
+                    }
+                    .night__temperature{
+                        text-align: center;
+                        font-size: 1.5em;
+                        width: 60px;
+                        height: 30px;
+                        background: rgba(0, 0, 0, 0.5);
+                    }
+                    .night__condition{
+                        font-size: 1.5em;
+                    }
+                }
+                .centerBox__day{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;;
+                    .day__title{
+                        font-size: 2.5em;
+                    }
+                    .day__icon{
+                        width: 140px;
+                        height: 140px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 80px;
+                            height: 80px;
+
+                        }
+                    }
+                    .day__temperature{
+                        text-align: center;
+                        font-size: 1.5em;
+                        width: 60px;
+                        height: 30px;
+                        background: rgba(0, 0, 0, 0.5);
+                    }
+                    .day__condition{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            .rightBox{
+                width: 30%;
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+        }
+        &__block{
+            h1{
+                margin-left: 80px;
+                font-size: 2.5em;
+            }
+        }
+    }
+    .page__footer{
+        background: white;
+        height: 80px;
+        width: 100%;
+        z-index:999;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+}

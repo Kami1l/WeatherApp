@@ -44,6 +44,10 @@ body{
             }
             .header__item{
                 cursor: pointer;
+                a{
+                    text-decoration: none;
+                    color:rgba(0, 100, 194, 0.7);
+                }
             }
         }
     }
@@ -62,8 +66,13 @@ body{
                 margin-bottom: 100px;
             }
         }
-        .main__block{
+        a{
             z-index: 999;
+            text-decoration: none;
+            color: white;
+        }
+        .main__block{
+            z-index: 998;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 0.4fr 0.4fr 0.4fr;

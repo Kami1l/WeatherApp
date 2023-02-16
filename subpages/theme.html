@@ -4,9 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/subpages/substyle/theme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../js/mainExpand.js" defer></script>
+    <title>Weather-app</title>
 </head>
-<body>
-    
+<body class="page">
+    <div class="mask"></div>
+    <header class="page__header header">
+        <ul class="header__list">
+            <li class="header__item">
+                <a href="/index.html">Home</a>
+            </li>
+            <li class="header__item">
+                <a href="/subpages/WeatherGraph.html">WeatherGraph<sup>Soon</sup></a>
+            </li>
+            </li>
+            <li class="header__item">Soon</li>
+            <li class="header__item">Soon</li>
+        </ul>
+        <ul class="header__list">
+            <li class="header__item">
+                <a href="https://www.facebook.com">Facebook</a>
+            </li>
+            <li class="header__item">
+                <a href="https://www.instagram.com">Instagram</a>
+            </li>
+            <li class="header__item">
+                <a href="https://twitter.com">Twitter</a>
+            </li>
+        </ul>
+    </header>
+    <main class="page__main main">
+        <section class="page__section">
+            <div class="main__block">
+                <h1 class="main__theme">City</h1>
+            </div>
+        </section>
+        <section class="page__section">
+            <div class="leftBox">
+                <div class="leftBox__actualTime">
+                    <h3 class="actualTime__day">day</h3>
+                    <h3 class="actualTime__time">time</h3>
+                </div>
+                <div class="leftBox__info">
+                    <div class="info__icon">
+                        <img src="/img/icons/cloud.png" alt="">
+                    </div>
+                    <div class="info__weather">
+                        <div class="weather__temperature">-11<sup>o</sup>C</div>
+                        <div class="weather__condition">deszcz</div>
+                        <div class="weather__wind">nakurwia 40 m/s</div>
+                    </div>
+                    <div class="leftBox__air">
+                        <div class="air__uv">Jakośc powietrza</div>
+                        <div class="air__Ultraviolet">UV index</div>
+                        <div class="air__pm">224% Normy PM 2,5</div>
+                        <div class="air__station">Stacja : Warszawa</div>
+                    </div>
+                </div>
+            </div>
+            <div class="centerBox">
+                <div class="centerBox__night">
+                    <div class="night__title">Night</div>
+                    <div class="night__icon"><img src="../img/icons/hot.png" alt=""></div>
+                    <div class="night__temperature">-2</div>
+                    <div class="night__condition">pochmurno</div>
+                </div>
+                <div class="centerBox__day">
+                    <div class="day__title">Day</div>
+                    <div class="day__icon"><img src="../img/icons/rainy-day.png" alt=""></div>
+                    <div class="day__temperature">12</div>
+                    <div class="day__condition">Słonecznie</div>
+                </div>
+            </div>
+            <div class="rightBox">
+                <div class="rightBox__check">
+                   <h1>Soon</h1>
+                </div>
+            </div>
+        </section>
+        <section class="page__section">
+            <ul class="page__list">
+                <li class="page__item">Prognoza:</li>
+                <li class="page__item">GODZINOWA</li>
+                <li class="page__item">16-DNIOWA</li>
+                <li class="page__item">WEEKEND</li>
+                <li class="page__item">RADARY</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="page__footer footer">
+
+    </footer>
 </body>
 </html>

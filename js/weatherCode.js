@@ -101,15 +101,15 @@ export let codes = {
     },
     '95 *' : {
         name : 'thunderstorm slight/moderate',
-        icon : "thunder.png"
+        icon : "storm.png"
     },
     '96' : {
         name : 'slight thunerstorm',
-        icon : "thunder.png"
+        icon : "storm.png"
     },
     '99 *' : {
         name : 'heavy hail thunderstorm',
-        icon : "thunder.png"
+        icon : "thunderstorm.png"
     }
 }
 
