@@ -52,7 +52,7 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 9fr 0.5fr;
+        grid-template-rows: 0.5fr 2fr ;
         padding-top: 4em;
         width: 100%;
         .page__section{
@@ -165,7 +165,7 @@
                 }
             }
             .centerBox{
-                width: 30%;
+                width: 25%;
                 border-left: 1px solid rgba(255, 255, 255, 0.5);
                 display: flex;
                 flex-direction: row;
@@ -200,6 +200,7 @@
                     }
                     .night__condition{
                         font-size: 1.5em;
+                        text-align: center;
                     }
                 }
                 .centerBox__day{
@@ -230,17 +231,52 @@
                         background: rgba(0, 0, 0, 0.5);
                     }
                     .day__condition{
+                        text-align: center;
                         font-size: 1.5em;
                     }
                 }
             }
             .rightBox{
-                width: 30%;
+                width: 45%;
                 border-left: 1px solid rgba(255, 255, 255, 0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                .page__graph{
+                    padding: 10px;
+                    width: 550px;
+                    height: 350px;
+                    background: white;
+                    z-index: 1;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #canvas{
+                        width: inherit;
+                        height: inherit;
+                        border: 1px solid red;
+        
+                    }
+                }
+                .boxButton{
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    button{
+                        font-size: 1em;
+                        font-weight: bold;
+                        border: none;
+                        color:rgb(0, 100, 194);
+                        padding: 5px;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.4);
+                        }
+                    }
+                }
             }
 
         }

@@ -99,7 +99,7 @@ export let codes = {
         name : 'heavy snow showers',
         icon : "snow.png",
     },
-    '95 *' : {
+    '95' : {
         name : 'thunderstorm slight/moderate',
         icon : "storm.png"
     },
@@ -107,7 +107,7 @@ export let codes = {
         name : 'slight thunerstorm',
         icon : "storm.png"
     },
-    '99 *' : {
+    '99' : {
         name : 'heavy hail thunderstorm',
         icon : "thunderstorm.png"
     }

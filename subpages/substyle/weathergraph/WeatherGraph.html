@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="substyle/weatherGraph.css">
+    <link rel="stylesheet" href="/subpages/substyle/weathergraph/WeatherGraph.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="/js/weatherCode.js"></script>
-    <script type="module" src="/js/main.js" defer></script>
+    <script type="module" src="/js/coordinates.js"></script>
     <title>Weather-app</title>
 </head>
 <body class="page">
@@ -17,7 +17,9 @@
             <li class="header__item">
                 <a href="/index.html">Home</a>
             </li>
-            <li class="header__item">WeatherGraph<sup>Soon</sup></li>
+            <li class="header__item">
+                <a href="#">Soon</a>
+            </li>
             <li class="header__item">Soon</li>
             <li class="header__item">Soon</li>
         </ul>
@@ -34,7 +36,16 @@
         </ul>
     </header>
     <main class="page__main main">
-    
+        <div class="page__graph">
+            <canvas id="myChart">
+            </canvas>
+        </div>
+        <div class="page__buttonsBox">
+            <button class="page__btn">Search</button>
+            <input class="page__input" type="text">
+            <button class="page__btn"></button>
+            <button class="page__btn">OK</button>
+        </div>
     </main>
     <footer class="page__footer footer">
 

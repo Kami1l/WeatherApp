@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/subpages/substyle/theme.css">
+    <link rel="stylesheet" href="/subpages/substyle/theme/theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="../js/mainExpand.js" defer></script>
+    <script type="module" src="/js/mainExpand.js" defer></script>
+    <!-- <script type="module" src="/js/weatherGraph.js" defer></script> -->
     <title>Weather-app</title>
 </head>
 <body class="page">
@@ -17,7 +19,7 @@
                 <a href="/index.html">Home</a>
             </li>
             <li class="header__item">
-                <a href="/subpages/WeatherGraph.html">WeatherGraph<sup>Soon</sup></a>
+                <a href="#">Soon</a>
             </li>
             </li>
             <li class="header__item">Soon</li>
@@ -67,31 +69,29 @@
             <div class="centerBox">
                 <div class="centerBox__night">
                     <div class="night__title">Night</div>
-                    <div class="night__icon"><img src="../img/icons/hot.png" alt=""></div>
+                    <div class="night__icon"><img src="/img/icons/hot.png" alt=""></div>
                     <div class="night__temperature">-2</div>
                     <div class="night__condition">pochmurno</div>
                 </div>
                 <div class="centerBox__day">
                     <div class="day__title">Day</div>
-                    <div class="day__icon"><img src="../img/icons/rainy-day.png" alt=""></div>
+                    <div class="day__icon"><img src="/img/icons/rainy-day.png" alt=""></div>
                     <div class="day__temperature">12</div>
                     <div class="day__condition">Słonecznie</div>
                 </div>
             </div>
             <div class="rightBox">
                 <div class="rightBox__check">
-                   <h1>Soon</h1>
+                    <div class="page__graph">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="boxButton">
+                        <button id="Temperature">Temperature</button>
+                        <button id="Rain">Rain</button>
+                        <button id="Pressure">pressure</button>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="page__section">
-            <ul class="page__list">
-                <li class="page__item">Prognoza:</li>
-                <li class="page__item">GODZINOWA</li>
-                <li class="page__item">16-DNIOWA</li>
-                <li class="page__item">WEEKEND</li>
-                <li class="page__item">RADARY</li>
-            </ul>
         </section>
     </main>
     <footer class="page__footer footer">

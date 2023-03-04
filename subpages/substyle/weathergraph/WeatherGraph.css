@@ -55,9 +55,51 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 9fr 0.5fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
   padding-top: 4em;
   width: 100%;
+}
+.page .main .page__graph {
+  padding: 10px;
+  box-shadow: inset 0 0 4px 2px black;
+  width: 1000px;
+  height: 450px;
+  background: white;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .main .page__graph #canvas {
+  width: inherit;
+  height: inherit;
+  border: 1px solid red;
+}
+.page .main .page__buttonsBox {
+  height: 100px;
+  width: 1000px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .main .page__buttonsBox .page__btn {
+  width: 140px;
+  height: 60px;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page .main .page__buttonsBox .page__input {
+  width: 140px;
+  height: 25px;
+  border: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  font-size: 1em;
 }
 .page .page__footer {
   background: white;

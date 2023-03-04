@@ -35,6 +35,7 @@ async function fetcher(i){
 
 //! Checking region name for fetch 
 //? Zrobić wybieranie danego regionu i szczegółowe info !!!!!
+
 function click(){
 
     let name;
