@@ -2,7 +2,6 @@ import coordinates from './coordinates.js';
 import code from './weatherCode.js'
 
 $(document).ready(function(){
-    // console.log(localStorage.getItem("sekcja"),localStorage.getItem("item"));
     if(localStorage.getItem("sekcja") == 0){
         console.log(coordinates[Number(localStorage.getItem("item"))]);
         load(Number(localStorage.getItem("item")))
@@ -11,8 +10,6 @@ $(document).ready(function(){
         load(Number(localStorage.getItem("item"))+3);
     }
 })
-
-
 
 const ctx = document.getElementById('myChart');
 
