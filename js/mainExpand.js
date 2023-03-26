@@ -12,7 +12,7 @@ $(document).ready(function(){
 })
 
 const ctx = document.getElementById('myChart');
-const dayOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; 
+const dayOfWeek = [ "Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; 
 
 function mode(array)
 {
@@ -65,7 +65,6 @@ async function load(item){
     returnArray = insert(returnArray,0,dayOfWeek[Date.today().getDay()])
     return returnArray;
   }
-
     //! The text data
 
     $(".main__theme")[0].innerHTML = coordinates[item].name;
