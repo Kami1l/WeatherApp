@@ -12,6 +12,7 @@ $(document).ready(function(){
 })
 
 const ctx = document.getElementById('myChart');
+const dayOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; 
 
 function mode(array)
 {
@@ -35,11 +36,36 @@ function mode(array)
     return maxEl;
 }
 
+const insert = (arr, index, newItem) => [
+  ...arr.slice(0, index),
+  newItem,
+  ...arr.slice(index)
+]
+
+let date = new Date();
+console.log();
+
 async function load(item){
     
-    let res = await fetch(coordinates[item].url)
-    let json = await res.json();
-    
+  let res = await fetch(coordinates[item].url)
+  let json = await res.json();
+
+  function dateDay(){
+    let e = Date.today();
+    let dayArray = [];
+    let returnArray = [];
+
+    for(let i = date.getDate(); i < date.getDate()+6;i++){
+      dayArray.push(e.next().day().getDay());
+    }
+
+    for(let i=0;i<dayArray.length;i++){
+      returnArray.push(dayOfWeek[dayArray[i]]);
+    }
+    returnArray = insert(returnArray,0,dayOfWeek[Date.today().getDay()])
+    return returnArray;
+  }
+
     //! The text data
 
     $(".main__theme")[0].innerHTML = coordinates[item].name;
@@ -91,11 +117,10 @@ async function load(item){
     $(".day__condition")[0].innerHTML = code[mode(midDayCondition)].name;
 
     //! The Graph 
-
     let lineChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday'],
+        labels: dateDay(),
         datasets: [{
           label: 'Average Temperature (Celsius)',
           data :  average(json.hourly.temperature_2m),
@@ -113,7 +138,7 @@ async function load(item){
     });
 
    $("#Rain").click(function(){
-    lineChart.data.datasets[0].data = average(json.hourly.rain);
+    lineChart.data.datasets[0].data = average(json.hourly.rain,true);
     lineChart.data.datasets[0].label = "Average rainfall (mm)"
     lineChart.update();
    })
@@ -130,26 +155,29 @@ async function load(item){
 
 }
 
-function average(e){
+function average(e,type){
   let avg=[];
   let loopRange = e.length/7;
   let sum=0;
   let i = 0;
   for(let j=0;j<e.length/24;j++){
-  
     while(i<loopRange){
       sum += e[i];
       i++;
     }
-    sum = Math.round(sum/24);
+    if(type == true){
+      sum = (sum/24);
+    }else{
+      sum = Math.round(sum/24);
+    }
+
     avg.push(sum);
     i=loopRange;
-
     loopRange+=24;
   }
 
   let data = [avg[0], avg[1], avg[2], avg[3], avg[4], avg[5],avg[6]];
-
   return data;
 }
+
 
